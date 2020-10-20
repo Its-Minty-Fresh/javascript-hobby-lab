@@ -16,12 +16,15 @@ a:active {
 }
 
 
+
+
 body > header, body > footer {
-    background-color: #555555;
+    background-color: #6180d2;
     height: 50px;
     padding: 20px;
     color: white;
 }
+
 
 .wrap {
     margin: 20px;
@@ -53,4 +56,8 @@ aside {
 
 .aside-banner img {
     width: 90%;
+}
+
+.did-you-know{
+    font-style: italic;
 }
