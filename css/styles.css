@@ -15,7 +15,10 @@ a:active {
     color: #fb0e02;
 }
 
-
+.header{
+    min-height: 500px;
+    background-color: #DFDFDF;
+}
 
 
 body > header, body > footer {
