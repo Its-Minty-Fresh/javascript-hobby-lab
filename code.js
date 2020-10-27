@@ -47,3 +47,23 @@ function showClicks() {
         alert("You have clicked the button " + numClicks + " times!");
     }
 }
+
+function calcFee() {
+    var books = parseInt(document.getElementById("books").value) * 0.25;
+    var dvd = parseInt(document.getElementById("dvd").value) * 0.5;
+    var days = parseInt(document.getElementById("days").value);
+
+    var fee = (books * days) + (dvd * days)
+
+
+    document.getElementById("fee").innerHTML = 'Your total  late fees are:  $'+ fee.toFixed(2);
+}
+
+function calcBill() {
+    var ppl = parseInt(document.getElementById("ppl").value);
+    var t = parseInt(document.getElementById("toppings").value) * 1.5;
+
+    var cost = (15 + t) / ppl;
+
+    document.getElementById("bill").innerHTML = 'The bill per person is $' + cost.toFixed(2);
+}
