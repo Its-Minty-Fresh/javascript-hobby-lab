@@ -20,10 +20,14 @@ a:active {
     background-color: #DFDFDF;
 }
 
+h1{
+    margin-bottom: auto;
+    margin-top: auto;
+}
 
 body > header, body > footer {
     background-color: #6180d2;
-    height: 50px;
+    height: 80px;
     padding: 20px;
     color: white;
 }
