@@ -1,29 +1,20 @@
-
-
-var numClicks = 0;
-
-function generateLetter()
-{
-    var num = Math.floor(Math.random() * 26) + 65;
-    var letter = String.fromCharCode(num);
-}
-
+let numClicks = 0;
 
 function onClick() {
     numClicks++;
 }
 
 function calcBac() {
-    var beer = parseInt(document.getElementById("beer").value) * 0.54;
-    var wine = parseInt(document.getElementById("wine").value) * 0.6;
-    var shot = parseInt(document.getElementById("shot").value) * 0.6;
-    var weight = parseInt(document.getElementById("weight").value);
-    var hours = parseInt(document.getElementById("hours").value);
+    let beer = parseInt(document.getElementById("beer").value) * 0.54;
+    let wine = parseInt(document.getElementById("wine").value) * 0.6;
+    let shot = parseInt(document.getElementById("shot").value) * 0.6;
+    let weight = parseInt(document.getElementById("weight").value);
+    let hours = parseInt(document.getElementById("hours").value);
 
 
-    var x = (beer + wine + shot) * 7.5;
-    var y = x / weight;
-    var bac = y - (hours * .015);
+    let x = (beer + wine + shot) * 7.5;
+    let y = x / weight;
+    let bac = y - (hours * .015);
 
     bac = +bac.toFixed(3);
 
@@ -49,21 +40,33 @@ function showClicks() {
 }
 
 function calcFee() {
-    var books = parseInt(document.getElementById("books").value) * 0.25;
-    var dvd = parseInt(document.getElementById("dvd").value) * 0.5;
-    var days = parseInt(document.getElementById("days").value);
+    let books = parseInt(document.getElementById("books").value) * 0.25;
+    let dvd = parseInt(document.getElementById("dvd").value) * 0.5;
+    let days = parseInt(document.getElementById("days").value);
 
-    var fee = (books * days) + (dvd * days)
+    let fee = (books * days) + (dvd * days)
 
 
     document.getElementById("fee").innerHTML = 'Your total  late fees are:  $'+ fee.toFixed(2);
 }
 
 function calcBill() {
-    var ppl = parseInt(document.getElementById("ppl").value);
-    var t = parseInt(document.getElementById("toppings").value) * 1.5;
+    let ppl = parseInt(document.getElementById("ppl").value);
+    let t = parseInt(document.getElementById("toppings").value) * 1.5;
 
-    var cost = (15 + t) / ppl;
+    let cost = (15 + t) / ppl;
 
     document.getElementById("bill").innerHTML = 'The bill per person is $' + cost.toFixed(2);
 }
+
+$(document).ready(function() {
+    $("#calcfee").click(function(){
+        calcFee();
+    });
+});
+
+$(document).ready(function() {
+    $("#calcbill").click(function(){
+        calcBill();
+    });
+});
