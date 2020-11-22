@@ -1,0 +1,195 @@
+<html lang="en">
+
+
+<head>
+    <title>Matt Kapitan Javascript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<header role="header" class="right" >
+    <h1>Class 3 Labs</h1>
+</header>
+
+
+<div class="wrap">
+    <main role="main">
+        <section>
+            <a href="index.html"><button type="submit" class="btn btn-primary">Home</button></a>
+            <br><br>
+
+            <h2>Welcome to Matt's Pizza!</h2>
+            <p>Please select from the following to place your order:</p>
+
+
+            <article id="introduction">
+                    <br>
+                    <ul class="nav nav-pills" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="pill" href="#t1">Pizza Options</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#t2">Delivery Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#t3">Order Information</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="t1" class="tab-pane active"><br>
+                            <form>
+                                <fieldset style="border-radius: 5px">
+                                    <h5>Select Pizza Size:</h5>
+                                    <div class="form-check">
+                                        <input type="radio" name="size" id="small" value="Small" class="form-check-input" checked="checked">
+                                        <label class="form-check-label" for="small">Small</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="size" id="medium"  value="Medium" class="form-check-input">
+                                        <label class="form-check-label" for="medium">Medium</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="size" id="large"  value="Large" class="form-check-input">
+                                        <label class="form-check-label" for="large">Large</label>
+                                    </div>
+                                </fieldset><br>
+
+                                <fieldset style="border-radius: 5px">
+                                    <h5>Select Crust:</h5>
+                                    <div class="form-check">
+                                        <input type="radio" name="crust" id="thin"  value="Thin" class="form-check-input" checked="checked">
+                                        <label class="form-check-label" for="thin">Thin</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="crust" id="pan"  value="Pan" class="form-check-input">
+                                        <label class="form-check-label" for="pan">Pan</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="crust" id="gluten"  value="Gluten Free" class="form-check-input">
+                                        <label class="form-check-label" for="gluten">Gluten Free</label>
+                                    </div>
+                                </fieldset><br>
+
+                                <fieldset style="border-radius: 5px">
+                                    <h5>Select Toppings:</h5>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="topping" id="pepperoni"  value="Meat" class="form-check-input" data-price="1.50">
+                                        <label class="form-check-label" for="pepperoni">Pepperoni</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="topping" id="sausage"  value="Meat" class="form-check-input" data-price="1.50">
+                                        <label class="form-check-label" for="sausage">Sasuage</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="topping" id="anchovies"  value="Meat" class="form-check-input" data-price="1.50">
+                                        <label class="form-check-label" for="anchovies">Anchovies</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="topping" id="mushrooms"  value="Veg" class="form-check-input" data-price="1.00">
+                                        <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="topping" id="onions"  value="Veg" class="form-check-input" data-price="1.00">
+                                        <label class="form-check-label" for="onions">Onions</label>
+                                    </div>
+                                </fieldset><br>
+                                <button type="button" id="PONext"  class="btn btn-outline-primary">Next</button>
+                            </form>
+
+
+                        </div>
+
+
+                        <div id="t2" class="tab-pane fade"><br>
+                            <form>
+                                <fieldset style="border-radius: 5px">
+
+                                    <div class="form-group w-25">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Name" >
+                                    </div>
+                                    <div class="form-group w-50">
+                                        <label for="address">Address</label>
+                                        <input type="text" class="form-control" id="address" placeholder="123 Main St" >
+                                    </div>
+                                    <div class="form-group w-25">
+                                        <label for="phone">Phone </label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                                    </div>
+                                </fieldset><br>
+                                <button type="button" id="POPrev" class="btn btn-outline-primary">Previous</button>
+                                <button type="button" id="ONext"  class="btn btn-outline-primary">Next</button>
+                            </form>
+                        </div>
+
+                        <div id="t3" class="tab-pane fade"><br>
+                            <form>
+                                <fieldset style="border-radius: 5px">
+                                    <h4 >Order Summary:</h4>
+                                    <h6>Pizza Size: <p id="size"></p></h6>
+                                    <h6>Crust Type:<p id="crustType"></p></h6>
+                                    <h6>Address:<p id="addressInfo"></p></h6>
+                                    <h6>Toppings:<p id="toppingOptions"></p></h6>
+                                    <h6>Order Total:<p id="orderTotal"></p></h6>
+
+                                </fieldset>
+                            </form>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </form>
+                <div class="req">
+                    <br><h3>Requirements</h3>
+                    <h4>Step 1: Choose pizza details</h4>
+                    <ol>
+                        <li>Size (small $7, medium $9, large $12)</li>
+                        <li>Crust (thin, pan, gluten free)</li>
+                        <li>Meats ($1.50 each)</li>
+                        <li>Veggies ($1.00 each)</li>
+                    </ol>
+                    <h4>Step 2: Enter delivery information</h4>
+                    <ol>
+                        <li>Name</li>
+                        <li>Address</li>
+                        <li>MPhone</li>
+                    </ol>
+                    <h4>Step 3: Order confirmation</h4>
+                    <ol>
+                        <li>Display all of the pizza details and customer information from steps 1 and 2</li>
+                        <li>Display the subtotal, calculated tax (use a rate of 5.1 %), delivery fee ($2), and the total amount due</li>
+                        <li>Format all amounts to two decimal places.</li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+    </main>
+    <div class="clearfloat"></div>
+</div>
+<footer role="contentinfo">
+    <small>Copyright &copy;
+        <time datetime="2020">2020</time>
+    </small>
+</footer>
+
+</body>
+</html>
+
+<script src="unit1.js"></script>
+
+
+

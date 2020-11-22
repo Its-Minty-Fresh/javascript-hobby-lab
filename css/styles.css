@@ -33,6 +33,7 @@ body > header, body > footer {
 }
 
 
+
 .wrap {
     margin: 20px;
 }
@@ -67,4 +68,7 @@ aside {
 
 .did-you-know{
     font-style: italic;
+}
+.req{
+    color: #949090;
 }
